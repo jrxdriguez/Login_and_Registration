@@ -1,0 +1,48 @@
+.flex {
+    display:flex;
+}
+
+.title {
+    color: rgb(30, 129, 222);
+}
+
+.container {
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    gap:50px;
+}
+
+.form {
+    background-color: rgb(166, 161, 161);
+    width: 300px;
+    padding-left:30px;
+    padding-right:30px;
+    padding-top:10px;
+    padding-bottom:30px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.greenbtn {
+    background-color: rgb(23, 167, 47); 
+    padding: 6px 12px 6px 12px;
+    border-radius: 10px;
+}
+.bluebtn {
+    background-color:  rgb(30, 129, 222);
+    padding: 6px 12px 6px 12px;
+    border-radius: 10px;
+}
+
+.greentxt {
+    color:  rgb(23, 167, 47);
+}
+
+.alert {
+    color: rgb(209, 0, 0);
+    width: 100;
+    text-align: center;
+
+}

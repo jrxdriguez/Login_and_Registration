@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+</head>
+<body>
+    <div class="container">
+        <div>
+            <form action="/register_user" method="POST" class="form">
+                <h1 class="title">Register</h1>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <h5 class="alert">{{message}}</h5>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div>
+                    <h4>First Name:</h4>
+                    <label for="first_name"></label>
+                    <input type="text" name="first_name">
+                </div>
+                <div>
+                    <h4>Last Name:</h4>
+                    <label for="last_name"></label>
+                    <input type="text" name="last_name">
+                </div>
+                <div>
+                    <h4>Email:</h4>
+                    <label for="email"></label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <h4>Password:</h4>
+                    <label for="password"></label>
+                    <input type="password" name="password">
+                </div>
+                <div>
+                    <h4> Confirm Password:</h4>
+                    <label for="confirm_password"></label>
+                    <input type="password" name="confirm_password">
+                </div>
+                <br>
+                <input type="submit" value="Register" class="bluebtn">
+            </form>
+            
+        </div>
+        
+        <div>
+            <form action="/loginuser" method="post" class="form">
+                <h1 class="greentxt">Login</h1>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                {% for message in messages %}
+                <h5 class="alert">{{message}}</h5>
+                {% endfor %}
+                {% endif %}
+                {% endwith %}
+                <div>
+                    <h4>Email:</h4>
+                    <label for="email"></label>
+                    <input type="text" name="email">
+                </div>
+                <div>
+                    <h4>Password:</h4>
+                    <label for="password"></label>
+                    <input type="password" name="password">
+                </div>
+                <br>
+                <input type="submit" value="Login" class="greenbtn">
+            </form>
+        </div>
+       
+
+    </div>
+
+</body>
+</html>
